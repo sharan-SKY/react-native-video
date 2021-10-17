@@ -544,6 +544,7 @@ static int const RCTVideoUnset = -1;
   [YBLog setDebugLevel:YBLogLevelVerbose];
   YBOptions *options = [YBOptions new];
   [options setValuesForKeysWithDictionary:youboraAnalyticsMeta];
+  [options setAutoDetectBackground:false];
   _plugin = [[YBPlugin alloc] initWithOptions:options];
   _contentId = [youboraAnalyticsMeta objectForKey:@"contentId"];
   BOOL isOffline = [[youboraAnalyticsMeta objectForKey:@"offline"] boolValue];
